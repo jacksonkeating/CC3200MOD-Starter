@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA7AC7141980B5BB002F2DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7131980B5BB002F2DEA /* Foundation.framework */; };
+		BA7AC7161980B5BB002F2DEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */; };
+		BA7AC7181980B5BB002F2DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7171980B5BB002F2DEA /* UIKit.framework */; };
+		BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC71C1980B5BB002F2DEA /* InfoPlist.strings */; };
+		BA7AC7201980B5BB002F2DEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC71F1980B5BB002F2DEA /* main.m */; };
+		BA7AC7241980B5BB002F2DEA /* BWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7231980B5BB002F2DEA /* BWAppDelegate.m */; };
+		BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7251980B5BB002F2DEA /* Images.xcassets */; };
+		BA7AC72D1980B5BB002F2DEA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC72C1980B5BB002F2DEA /* XCTest.framework */; };
+		BA7AC72E1980B5BB002F2DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7131980B5BB002F2DEA /* Foundation.framework */; };
+		BA7AC72F1980B5BB002F2DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7171980B5BB002F2DEA /* UIKit.framework */; };
+		BA7AC7371980B5BB002F2DEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7351980B5BB002F2DEA /* InfoPlist.strings */; };
+		BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA7AC7301980B5BB002F2DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA7AC7081980B5BB002F2DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA7AC70F1980B5BB002F2DEA;
+			remoteInfo = BREWise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA7AC7101980B5BB002F2DEA /* BREWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BREWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7AC7131980B5BB002F2DEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BA7AC7171980B5BB002F2DEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BA7AC71B1980B5BB002F2DEA /* BREWise-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BREWise-Info.plist"; sourceTree = "<group>"; };
+		BA7AC71D1980B5BB002F2DEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA7AC71F1980B5BB002F2DEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BA7AC7211980B5BB002F2DEA /* BREWise-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BREWise-Prefix.pch"; sourceTree = "<group>"; };
+		BA7AC7221980B5BB002F2DEA /* BWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWAppDelegate.h; sourceTree = "<group>"; };
+		BA7AC7231980B5BB002F2DEA /* BWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWAppDelegate.m; sourceTree = "<group>"; };
+		BA7AC7251980B5BB002F2DEA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BA7AC72B1980B5BB002F2DEA /* BREWiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BREWiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA7AC72C1980B5BB002F2DEA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BA7AC7341980B5BB002F2DEA /* BREWiseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BREWiseTests-Info.plist"; sourceTree = "<group>"; };
+		BA7AC7361980B5BB002F2DEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BREWiseTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA7AC70D1980B5BB002F2DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC7161980B5BB002F2DEA /* CoreGraphics.framework in Frameworks */,
+				BA7AC7181980B5BB002F2DEA /* UIKit.framework in Frameworks */,
+				BA7AC7141980B5BB002F2DEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7AC7281980B5BB002F2DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC72D1980B5BB002F2DEA /* XCTest.framework in Frameworks */,
+				BA7AC72F1980B5BB002F2DEA /* UIKit.framework in Frameworks */,
+				BA7AC72E1980B5BB002F2DEA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA7AC7071980B5BB002F2DEA = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7191980B5BB002F2DEA /* BREWise */,
+				BA7AC7321980B5BB002F2DEA /* BREWiseTests */,
+				BA7AC7121980B5BB002F2DEA /* Frameworks */,
+				BA7AC7111980B5BB002F2DEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA7AC7111980B5BB002F2DEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7101980B5BB002F2DEA /* BREWise.app */,
+				BA7AC72B1980B5BB002F2DEA /* BREWiseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA7AC7121980B5BB002F2DEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7131980B5BB002F2DEA /* Foundation.framework */,
+				BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */,
+				BA7AC7171980B5BB002F2DEA /* UIKit.framework */,
+				BA7AC72C1980B5BB002F2DEA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA7AC7191980B5BB002F2DEA /* BREWise */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7221980B5BB002F2DEA /* BWAppDelegate.h */,
+				BA7AC7231980B5BB002F2DEA /* BWAppDelegate.m */,
+				BA7AC7251980B5BB002F2DEA /* Images.xcassets */,
+				BA7AC71A1980B5BB002F2DEA /* Supporting Files */,
+			);
+			path = BREWise;
+			sourceTree = "<group>";
+		};
+		BA7AC71A1980B5BB002F2DEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC71B1980B5BB002F2DEA /* BREWise-Info.plist */,
+				BA7AC71C1980B5BB002F2DEA /* InfoPlist.strings */,
+				BA7AC71F1980B5BB002F2DEA /* main.m */,
+				BA7AC7211980B5BB002F2DEA /* BREWise-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA7AC7321980B5BB002F2DEA /* BREWiseTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */,
+				BA7AC7331980B5BB002F2DEA /* Supporting Files */,
+			);
+			path = BREWiseTests;
+			sourceTree = "<group>";
+		};
+		BA7AC7331980B5BB002F2DEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA7AC7341980B5BB002F2DEA /* BREWiseTests-Info.plist */,
+				BA7AC7351980B5BB002F2DEA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA7AC70F1980B5BB002F2DEA /* BREWise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA7AC73C1980B5BB002F2DEA /* Build configuration list for PBXNativeTarget "BREWise" */;
+			buildPhases = (
+				BA7AC70C1980B5BB002F2DEA /* Sources */,
+				BA7AC70D1980B5BB002F2DEA /* Frameworks */,
+				BA7AC70E1980B5BB002F2DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BREWise;
+			productName = BREWise;
+			productReference = BA7AC7101980B5BB002F2DEA /* BREWise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA7AC72A1980B5BB002F2DEA /* BREWiseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA7AC73F1980B5BB002F2DEA /* Build configuration list for PBXNativeTarget "BREWiseTests" */;
+			buildPhases = (
+				BA7AC7271980B5BB002F2DEA /* Sources */,
+				BA7AC7281980B5BB002F2DEA /* Frameworks */,
+				BA7AC7291980B5BB002F2DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA7AC7311980B5BB002F2DEA /* PBXTargetDependency */,
+			);
+			name = BREWiseTests;
+			productName = BREWiseTests;
+			productReference = BA7AC72B1980B5BB002F2DEA /* BREWiseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA7AC7081980B5BB002F2DEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BW;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Brewise;
+				TargetAttributes = {
+					BA7AC72A1980B5BB002F2DEA = {
+						TestTargetID = BA7AC70F1980B5BB002F2DEA;
+					};
+				};
+			};
+			buildConfigurationList = BA7AC70B1980B5BB002F2DEA /* Build configuration list for PBXProject "BREWise" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BA7AC7071980B5BB002F2DEA;
+			productRefGroup = BA7AC7111980B5BB002F2DEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA7AC70F1980B5BB002F2DEA /* BREWise */,
+				BA7AC72A1980B5BB002F2DEA /* BREWiseTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA7AC70E1980B5BB002F2DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */,
+				BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7AC7291980B5BB002F2DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC7371980B5BB002F2DEA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA7AC70C1980B5BB002F2DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC7201980B5BB002F2DEA /* main.m in Sources */,
+				BA7AC7241980B5BB002F2DEA /* BWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA7AC7271980B5BB002F2DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA7AC7311980B5BB002F2DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA7AC70F1980B5BB002F2DEA /* BREWise */;
+			targetProxy = BA7AC7301980B5BB002F2DEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA7AC71C1980B5BB002F2DEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA7AC71D1980B5BB002F2DEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BA7AC7351980B5BB002F2DEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA7AC7361980B5BB002F2DEA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA7AC73A1980B5BB002F2DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA7AC73B1980B5BB002F2DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA7AC73D1980B5BB002F2DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
+				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BA7AC73E1980B5BB002F2DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
+				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BA7AC7401980B5BB002F2DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BREWise.app/BREWise";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BREWiseTests/BREWiseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BA7AC7411980B5BB002F2DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BREWise.app/BREWise";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
+				INFOPLIST_FILE = "BREWiseTests/BREWiseTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA7AC70B1980B5BB002F2DEA /* Build configuration list for PBXProject "BREWise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7AC73A1980B5BB002F2DEA /* Debug */,
+				BA7AC73B1980B5BB002F2DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA7AC73C1980B5BB002F2DEA /* Build configuration list for PBXNativeTarget "BREWise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7AC73D1980B5BB002F2DEA /* Debug */,
+				BA7AC73E1980B5BB002F2DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BA7AC73F1980B5BB002F2DEA /* Build configuration list for PBXNativeTarget "BREWiseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA7AC7401980B5BB002F2DEA /* Debug */,
+				BA7AC7411980B5BB002F2DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA7AC7081980B5BB002F2DEA /* Project object */;
+}
