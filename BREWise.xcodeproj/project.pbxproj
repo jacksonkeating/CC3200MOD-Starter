@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */; };
 		BA7AC7141980B5BB002F2DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7131980B5BB002F2DEA /* Foundation.framework */; };
 		BA7AC7161980B5BB002F2DEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */; };
 		BA7AC7181980B5BB002F2DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7171980B5BB002F2DEA /* UIKit.framework */; };
@@ -19,6 +20,8 @@
 		BA7AC72F1980B5BB002F2DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7171980B5BB002F2DEA /* UIKit.framework */; };
 		BA7AC7371980B5BB002F2DEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7351980B5BB002F2DEA /* InfoPlist.strings */; };
 		BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */; };
+		BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */; };
+		BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA51714E19A1785A00CE4A2A /* BWDiscovermDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDiscovermDNS.h; sourceTree = "<group>"; };
+		BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDiscovermDNS.m; sourceTree = "<group>"; };
 		BA7AC7101980B5BB002F2DEA /* BREWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BREWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7AC7131980B5BB002F2DEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +53,9 @@
 		BA7AC7341980B5BB002F2DEA /* BREWiseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BREWiseTests-Info.plist"; sourceTree = "<group>"; };
 		BA7AC7361980B5BB002F2DEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BREWiseTests.m; sourceTree = "<group>"; };
+		BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWControlPanelViewController.h; sourceTree = "<group>"; };
+		BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWControlPanelViewController.m; sourceTree = "<group>"; };
+		BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWControlPanelViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +115,15 @@
 		BA7AC7191980B5BB002F2DEA /* BREWise */ = {
 			isa = PBXGroup;
 			children = (
+				BA51714E19A1785A00CE4A2A /* BWDiscovermDNS.h */,
+				BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */,
 				BA7AC7221980B5BB002F2DEA /* BWAppDelegate.h */,
 				BA7AC7231980B5BB002F2DEA /* BWAppDelegate.m */,
 				BA7AC7251980B5BB002F2DEA /* Images.xcassets */,
 				BA7AC71A1980B5BB002F2DEA /* Supporting Files */,
+				BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */,
+				BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */,
+				BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */,
 			);
 			path = BREWise;
 			sourceTree = "<group>";
@@ -221,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */,
+				BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */,
 				BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */,
+				BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */,
 				BA7AC7201980B5BB002F2DEA /* main.m in Sources */,
 				BA7AC7241980B5BB002F2DEA /* BWAppDelegate.m in Sources */,
 			);
@@ -440,6 +456,7 @@
 				BA7AC73E1980B5BB002F2DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA7AC73F1980B5BB002F2DEA /* Build configuration list for PBXNativeTarget "BREWiseTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +465,7 @@
 				BA7AC7411980B5BB002F2DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

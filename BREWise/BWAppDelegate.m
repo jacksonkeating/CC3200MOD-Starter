@@ -7,6 +7,7 @@
 //
 
 #import "BWAppDelegate.h"
+#import "BWControlPanelViewController.h"
 
 @implementation BWAppDelegate
 
@@ -14,6 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    BWControlPanelViewController *controlPanelVC = [[BWControlPanelViewController alloc] init];
+    self.window.rootViewController = controlPanelVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
