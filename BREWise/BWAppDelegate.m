@@ -8,6 +8,7 @@
 
 #import "BWAppDelegate.h"
 #import "BWControlPanelViewController.h"
+#import "BWSettingsViewController.h"
 
 @implementation BWAppDelegate
 
@@ -17,7 +18,17 @@
     // Override point for customization after application launch.
     
     BWControlPanelViewController *controlPanelVC = [[BWControlPanelViewController alloc] init];
-    self.window.rootViewController = controlPanelVC;
+    BWSettingsViewController *settingsVC = [[BWSettingsViewController alloc] init];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    //tabBarController.viewControllers = @[hvc, rvc];
+    tabBarController.viewControllers = [NSArray arrayWithObjects: controlPanelVC, settingsVC, nil];
+    
+    //self.window.rootViewController = hvc;
+    //self.window.rootViewController = rvc;
+    self.window.rootViewController = tabBarController;
+    
+    //self.window.rootViewController = controlPanelVC;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

@@ -22,6 +22,8 @@
 		BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */; };
 		BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */; };
 		BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */; };
+		BADAD0E019A6C1CD008E49AE /* BWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */; };
+		BADAD0E119A6C1CD008E49AE /* BWSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWControlPanelViewController.h; sourceTree = "<group>"; };
 		BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWControlPanelViewController.m; sourceTree = "<group>"; };
 		BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWControlPanelViewController.xib; sourceTree = "<group>"; };
+		BADAD0DD19A6C1CD008E49AE /* BWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSettingsViewController.h; sourceTree = "<group>"; };
+		BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSettingsViewController.m; sourceTree = "<group>"; };
+		BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,9 @@
 				BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */,
 				BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */,
 				BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */,
+				BADAD0DD19A6C1CD008E49AE /* BWSettingsViewController.h */,
+				BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */,
+				BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */,
 			);
 			path = BREWise;
 			sourceTree = "<group>";
@@ -205,6 +213,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Brewise;
 				TargetAttributes = {
+					BA7AC70F1980B5BB002F2DEA = {
+						DevelopmentTeam = R46R2L3NAR;
+					};
 					BA7AC72A1980B5BB002F2DEA = {
 						TestTargetID = BA7AC70F1980B5BB002F2DEA;
 					};
@@ -235,6 +246,7 @@
 			files = (
 				BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */,
 				BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */,
+				BADAD0E119A6C1CD008E49AE /* BWSettingsViewController.xib in Resources */,
 				BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADAD0E019A6C1CD008E49AE /* BWSettingsViewController.m in Sources */,
 				BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */,
 				BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */,
 				BA7AC7201980B5BB002F2DEA /* main.m in Sources */,
@@ -376,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
 				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";
@@ -389,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
 				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";

@@ -13,13 +13,8 @@
 
 @interface BWControlPanelViewController () <UITextFieldDelegate, NSStreamDelegate, NSNetServiceBrowserDelegate, NSNetServiceDelegate>
 
-@property (nonatomic, weak) IBOutlet UILabel *ipAddressLabel;
-@property (nonatomic, weak) IBOutlet UILabel *portLabel;
-@property (nonatomic, weak) IBOutlet UILabel *commandLabel;
 @property (nonatomic, weak) IBOutlet UILabel *realTemperatureLabel;
 @property (nonatomic, weak) IBOutlet UILabel *setTemperatureLabel;
-@property (nonatomic, weak) IBOutlet UITextField *ipAddressText;
-@property (nonatomic, weak) IBOutlet UITextField *portText;
 @property (nonatomic, weak) IBOutlet UITextField *commandText;
 @property (nonatomic, weak) IBOutlet UIButton *temperatureButton;
 @property (nonatomic, weak) IBOutlet UIButton *orangeButton;
@@ -35,13 +30,8 @@
 
 @implementation BWControlPanelViewController
 
-@synthesize ipAddressLabel;
-@synthesize portLabel;
-@synthesize commandLabel;
 @synthesize realTemperatureLabel;
 @synthesize setTemperatureLabel;
-@synthesize ipAddressText;
-@synthesize portText;
 @synthesize commandText;
 @synthesize temperatureButton;
 
@@ -52,6 +42,28 @@
 uint8_t *buffer;
 unsigned int len = 0;
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        self.tabBarItem.title = @"Control Panel";
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (IBAction)openPort:(id)sender
 {
