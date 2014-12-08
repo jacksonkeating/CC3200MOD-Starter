@@ -8,7 +8,7 @@
 
 #import "BWAppDelegate.h"
 #import "BWControlPanelViewController.h"
-#import "BWSettingsViewController.h"
+#import "SmartConfigSCViewController.h"
 
 @implementation BWAppDelegate
 
@@ -18,7 +18,7 @@
     // Override point for customization after application launch.
     
     BWControlPanelViewController *controlPanelVC = [[BWControlPanelViewController alloc] init];
-    BWSettingsViewController *settingsVC = [[BWSettingsViewController alloc] init];
+    SmartConfigSCViewController *settingsVC = [[SmartConfigSCViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     //tabBarController.viewControllers = @[hvc, rvc];

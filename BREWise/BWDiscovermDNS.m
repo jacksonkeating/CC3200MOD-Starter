@@ -12,6 +12,7 @@
 
 @property (strong,atomic) NSNetServiceBrowser *serviceBrowser;
 @property (strong,atomic) NSMutableArray *services;
+@property (nonatomic, strong) NSTimer *serviceBrowserTimeout;
 
 @end
 
@@ -19,7 +20,9 @@
 
 @synthesize ipAddress;
 @synthesize port;
+@synthesize didFind;
 
+@synthesize serviceBrowserTimeout;
 @synthesize serviceBrowser;
 @synthesize services;
 
@@ -46,8 +49,23 @@
     self.serviceBrowser = [[NSNetServiceBrowser alloc] init];
     [serviceBrowser setDelegate:self];
     [serviceBrowser searchForServicesOfType:@"_uart._tcp" inDomain:@"local"];
+    
+    /*serviceBrowserTimeout = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(serviceBrowserTimeout:) userInfo:nil repeats:NO];*/
 }
-
+/*
+- (void)serviceBrowserTimeout:(NSTimer*)timer
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:@"Could not find brewise service."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
+    [serviceBrowser stop];
+    [serviceBrowserTimeout invalidate];
+    self.didFind = FALSE;
+}
+*/
 - (void)netServiceBrowser:(NSNetServiceBrowser *)browser
            didFindService:(NSNetService *)aNetService
                moreComing:(BOOL)moreComing
@@ -61,6 +79,8 @@
         NSLog(@"Done adding.");
         NSLog(@"%@",[[self.services objectAtIndex:([self.services count] -1)] name]);
         [self resolveIPAddress:[self.services objectAtIndex:([self.services count] -1)]];
+        [serviceBrowserTimeout invalidate];
+        self.didFind = TRUE;
     }
     
 }
@@ -80,13 +100,13 @@
     NSLog(@"An error occurred. Error code = %d", [error intValue]);
     [alert show];
     
-    [serviceBrowser stop];
+    //[serviceBrowser stop];
 }
 
 - (void)netServiceBrowser:(NSNetServiceBrowser *)aNetServiceBrowser didRemoveService:(NSNetService *)aNetService moreComing:(BOOL)moreComing
 {
     [self.services removeObject:aNetService];
-    
+    NSLog(@"Removed one.");
     if(!moreComing)
     {
         NSLog(@"Done removing.");
@@ -111,7 +131,7 @@
 -(void) resolveIPAddress:(NSNetService *)service {
     NSNetService *remoteService = service;
     remoteService.delegate = self;
-    [remoteService resolveWithTimeout:5];
+    [remoteService resolveWithTimeout:20.0];
 }
 
 - (void)netServiceDidResolveAddress:(NSNetService *)netService
@@ -156,7 +176,7 @@
         
         NSLog(@"Client Address: %@",addressLog);
         
-        [self.serviceBrowser stop];
+        //[self.serviceBrowser stop];
     }
 }
 
@@ -165,7 +185,8 @@
 {
     [self handleError:[errorDict objectForKey:NSNetServicesErrorCode] withService:netService];
     [services removeObject:netService];
-    [self.serviceBrowser stop];
+    //[self.serviceBrowser stop];
+    self.didFind = FALSE;
 }
 
 // Verifies [netService addresses]

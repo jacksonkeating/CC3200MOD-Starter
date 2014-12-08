@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSString *ipAddress;
 @property (nonatomic) NSUInteger port;
+@property (nonatomic) BOOL didFind;
 
 - (void)findBrewiseService;
 

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA15E98019A82E2A00377C8B /* SmartConfigDiscoverMDNS.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E97F19A82E2A00377C8B /* SmartConfigDiscoverMDNS.m */; };
+		BA15E98819A82E5900377C8B /* FTC.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA15E98319A82E5900377C8B /* FTC.plist */; };
+		BA15E98919A82E5900377C8B /* libFirstTimeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA15E98619A82E5900377C8B /* libFirstTimeConfig.a */; };
+		BA15E98E19A82EFF00377C8B /* SmartConfigGlobalConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E98D19A82EFF00377C8B /* SmartConfigGlobalConfig.m */; };
+		BA15E99119A82F5E00377C8B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E99019A82F5E00377C8B /* Reachability.m */; };
+		BA15E99419A8318D00377C8B /* SmartConfigSCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA15E99319A8318D00377C8B /* SmartConfigSCViewController.m */; };
+		BA15E99819A83D9200377C8B /* SmartConfigSCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA15E99719A83D9200377C8B /* SmartConfigSCViewController.xib */; };
 		BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */ = {isa = PBXBuildFile; fileRef = BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */; };
 		BA7AC7141980B5BB002F2DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7131980B5BB002F2DEA /* Foundation.framework */; };
 		BA7AC7161980B5BB002F2DEA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7151980B5BB002F2DEA /* CoreGraphics.framework */; };
@@ -22,8 +29,8 @@
 		BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */; };
 		BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */; };
 		BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */; };
-		BADAD0E019A6C1CD008E49AE /* BWSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */; };
-		BADAD0E119A6C1CD008E49AE /* BWSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */; };
+		BAEDDF6A19B5E95D0052E5AD /* BWSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */; };
+		BAEDDF6B19B5E95D0052E5AD /* BWSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA15E97E19A82E2A00377C8B /* SmartConfigDiscoverMDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartConfigDiscoverMDNS.h; sourceTree = "<group>"; };
+		BA15E97F19A82E2A00377C8B /* SmartConfigDiscoverMDNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartConfigDiscoverMDNS.m; sourceTree = "<group>"; };
+		BA15E98119A82E5900377C8B /* FirstTimeConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstTimeConfig.h; sourceTree = "<group>"; };
+		BA15E98219A82E5900377C8B /* FTC-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTC-Prefix.pch"; sourceTree = "<group>"; };
+		BA15E98319A82E5900377C8B /* FTC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FTC.plist; sourceTree = "<group>"; };
+		BA15E98419A82E5900377C8B /* Ftc20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ftc20.h; sourceTree = "<group>"; };
+		BA15E98519A82E5900377C8B /* FtcEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtcEncode.h; sourceTree = "<group>"; };
+		BA15E98619A82E5900377C8B /* libFirstTimeConfig.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFirstTimeConfig.a; sourceTree = "<group>"; };
+		BA15E98719A82E5900377C8B /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		BA15E98A19A82E7200377C8B /* NSData+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AESCrypt.h"; sourceTree = "<group>"; };
+		BA15E98B19A82E7200377C8B /* NSString+AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AESCrypt.h"; sourceTree = "<group>"; };
+		BA15E98C19A82EFF00377C8B /* SmartConfigGlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartConfigGlobalConfig.h; sourceTree = "<group>"; };
+		BA15E98D19A82EFF00377C8B /* SmartConfigGlobalConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartConfigGlobalConfig.m; sourceTree = "<group>"; };
+		BA15E98F19A82F5E00377C8B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BA15E99019A82F5E00377C8B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BA15E99219A8318D00377C8B /* SmartConfigSCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartConfigSCViewController.h; sourceTree = "<group>"; };
+		BA15E99319A8318D00377C8B /* SmartConfigSCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmartConfigSCViewController.m; sourceTree = "<group>"; };
+		BA15E99719A83D9200377C8B /* SmartConfigSCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmartConfigSCViewController.xib; sourceTree = "<group>"; };
 		BA51714E19A1785A00CE4A2A /* BWDiscovermDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDiscovermDNS.h; sourceTree = "<group>"; };
 		BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDiscovermDNS.m; sourceTree = "<group>"; };
 		BA7AC7101980B5BB002F2DEA /* BREWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BREWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,9 +83,9 @@
 		BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWControlPanelViewController.h; sourceTree = "<group>"; };
 		BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWControlPanelViewController.m; sourceTree = "<group>"; };
 		BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWControlPanelViewController.xib; sourceTree = "<group>"; };
-		BADAD0DD19A6C1CD008E49AE /* BWSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSettingsViewController.h; sourceTree = "<group>"; };
-		BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSettingsViewController.m; sourceTree = "<group>"; };
-		BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSettingsViewController.xib; sourceTree = "<group>"; };
+		BAEDDF6719B5E95D0052E5AD /* BWSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSetupViewController.h; sourceTree = "<group>"; };
+		BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSetupViewController.m; sourceTree = "<group>"; };
+		BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSetupViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +96,7 @@
 				BA7AC7161980B5BB002F2DEA /* CoreGraphics.framework in Frameworks */,
 				BA7AC7181980B5BB002F2DEA /* UIKit.framework in Frameworks */,
 				BA7AC7141980B5BB002F2DEA /* Foundation.framework in Frameworks */,
+				BA15E98919A82E5900377C8B /* libFirstTimeConfig.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +113,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA15E96D19A82CFA00377C8B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				BA15E96E19A82D0500377C8B /* FTC */,
+				BA15E96F19A82D3200377C8B /* mDNS */,
+				BA15E97019A82D3700377C8B /* GlobalConfig */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		BA15E96E19A82D0500377C8B /* FTC */ = {
+			isa = PBXGroup;
+			children = (
+				BA15E98619A82E5900377C8B /* libFirstTimeConfig.a */,
+				BA15E98219A82E5900377C8B /* FTC-Prefix.pch */,
+				BA15E98119A82E5900377C8B /* FirstTimeConfig.h */,
+				BA15E98319A82E5900377C8B /* FTC.plist */,
+				BA15E98419A82E5900377C8B /* Ftc20.h */,
+				BA15E98519A82E5900377C8B /* FtcEncode.h */,
+				BA15E98719A82E5900377C8B /* NetworkHelper.h */,
+				BA15E98A19A82E7200377C8B /* NSData+AESCrypt.h */,
+				BA15E98B19A82E7200377C8B /* NSString+AESCrypt.h */,
+			);
+			name = FTC;
+			sourceTree = "<group>";
+		};
+		BA15E96F19A82D3200377C8B /* mDNS */ = {
+			isa = PBXGroup;
+			children = (
+				BA15E97E19A82E2A00377C8B /* SmartConfigDiscoverMDNS.h */,
+				BA15E97F19A82E2A00377C8B /* SmartConfigDiscoverMDNS.m */,
+			);
+			name = mDNS;
+			sourceTree = "<group>";
+		};
+		BA15E97019A82D3700377C8B /* GlobalConfig */ = {
+			isa = PBXGroup;
+			children = (
+				BA15E98C19A82EFF00377C8B /* SmartConfigGlobalConfig.h */,
+				BA15E98D19A82EFF00377C8B /* SmartConfigGlobalConfig.m */,
+			);
+			name = GlobalConfig;
+			sourceTree = "<group>";
+		};
+		BA15E97119A82D6B00377C8B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				BA15E98F19A82F5E00377C8B /* Reachability.h */,
+				BA15E99019A82F5E00377C8B /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
 		BA7AC7071980B5BB002F2DEA = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +199,11 @@
 		BA7AC7191980B5BB002F2DEA /* BREWise */ = {
 			isa = PBXGroup;
 			children = (
+				BA15E99219A8318D00377C8B /* SmartConfigSCViewController.h */,
+				BA15E99319A8318D00377C8B /* SmartConfigSCViewController.m */,
+				BA15E99719A83D9200377C8B /* SmartConfigSCViewController.xib */,
+				BA15E96D19A82CFA00377C8B /* Library */,
+				BA15E97119A82D6B00377C8B /* Reachability */,
 				BA51714E19A1785A00CE4A2A /* BWDiscovermDNS.h */,
 				BA51714F19A1785A00CE4A2A /* BWDiscovermDNS.m */,
 				BA7AC7221980B5BB002F2DEA /* BWAppDelegate.h */,
@@ -129,9 +213,9 @@
 				BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */,
 				BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */,
 				BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */,
-				BADAD0DD19A6C1CD008E49AE /* BWSettingsViewController.h */,
-				BADAD0DE19A6C1CD008E49AE /* BWSettingsViewController.m */,
-				BADAD0DF19A6C1CD008E49AE /* BWSettingsViewController.xib */,
+				BAEDDF6719B5E95D0052E5AD /* BWSetupViewController.h */,
+				BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */,
+				BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */,
 			);
 			path = BREWise;
 			sourceTree = "<group>";
@@ -245,8 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */,
+				BA15E99819A83D9200377C8B /* SmartConfigSCViewController.xib in Resources */,
 				BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */,
-				BADAD0E119A6C1CD008E49AE /* BWSettingsViewController.xib in Resources */,
+				BAEDDF6B19B5E95D0052E5AD /* BWSetupViewController.xib in Resources */,
+				BA15E98819A82E5900377C8B /* FTC.plist in Resources */,
 				BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,11 +352,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BADAD0E019A6C1CD008E49AE /* BWSettingsViewController.m in Sources */,
+				BA15E98E19A82EFF00377C8B /* SmartConfigGlobalConfig.m in Sources */,
+				BA15E99119A82F5E00377C8B /* Reachability.m in Sources */,
 				BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */,
+				BA15E98019A82E2A00377C8B /* SmartConfigDiscoverMDNS.m in Sources */,
 				BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */,
 				BA7AC7201980B5BB002F2DEA /* main.m in Sources */,
 				BA7AC7241980B5BB002F2DEA /* BWAppDelegate.m in Sources */,
+				BAEDDF6A19B5E95D0052E5AD /* BWSetupViewController.m in Sources */,
+				BA15E99419A8318D00377C8B /* SmartConfigSCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +483,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
 				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jacksonkeating/Documents/Example,
+					Code/WiFi_Starter_App_iOS_Source_1.0/Source/SmartConfigCC31XX,
+					"$(PROJECT_DIR)/BREWise",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -407,6 +503,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BREWise/BREWise-Prefix.pch";
 				INFOPLIST_FILE = "BREWise/BREWise-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jacksonkeating/Documents/Example,
+					Code/WiFi_Starter_App_iOS_Source_1.0/Source/SmartConfigCC31XX,
+					"$(PROJECT_DIR)/BREWise",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

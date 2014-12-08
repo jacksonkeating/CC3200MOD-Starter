@@ -6,9 +6,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWControlPanelViewController">
             <connections>
-                <outlet property="commandText" destination="Uo6-Lo-TEV" id="q2B-6P-hrk"/>
+                <outlet property="getTemperatureButton" destination="X5Y-16-pxl" id="XWs-QL-GT7"/>
+                <outlet property="getTemperatureText" destination="Uo6-Lo-TEV" id="FPN-fu-q7l"/>
                 <outlet property="orangeButton" destination="WFc-g1-msH" id="53s-2Z-MpJ"/>
-                <outlet property="temperatureButton" destination="X5Y-16-pxl" id="StY-Xt-qdM"/>
+                <outlet property="setTemperatureButton" destination="tS6-il-oQo" id="6ie-hY-baw"/>
+                <outlet property="setTemperatureText" destination="WeK-Dl-M5R" id="t3l-2t-aG4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4it-oU-UFX"/>
             </connections>
         </placeholder>
@@ -18,13 +20,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5Y-16-pxl">
-                    <rect key="frame" x="20" y="66" width="115" height="30"/>
+                    <rect key="frame" x="20" y="134" width="115" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Get Temperature">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="getTemperature:" destination="-1" eventType="touchUpInside" id="r1Y-1d-CY2"/>
+                        <action selector="getTemperature:" destination="-1" eventType="touchUpInside" id="kd3-Xb-Fbu"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQt-L9-x1v">
@@ -38,7 +40,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFc-g1-msH">
-                    <rect key="frame" x="20" y="120" width="84" height="30"/>
+                    <rect key="frame" x="20" y="188" width="84" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Orange LED">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,10 +50,32 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo6-Lo-TEV">
-                    <rect key="frame" x="165" y="66" width="135" height="30"/>
+                    <rect key="frame" x="165" y="134" width="135" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="obe-IB-doZ"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS6-il-oQo">
+                    <rect key="frame" x="20" y="79" width="113" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Set Temperature">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setTemperature:" destination="-1" eventType="touchUpInside" id="JG4-ef-2TQ"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WeK-Dl-M5R">
+                    <rect key="frame" x="165" y="80" width="135" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="6iW-v0-ykf"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

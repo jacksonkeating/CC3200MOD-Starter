@@ -13,13 +13,14 @@
 
 @interface BWControlPanelViewController () <UITextFieldDelegate, NSStreamDelegate, NSNetServiceBrowserDelegate, NSNetServiceDelegate>
 
-@property (nonatomic, weak) IBOutlet UILabel *realTemperatureLabel;
-@property (nonatomic, weak) IBOutlet UILabel *setTemperatureLabel;
-@property (nonatomic, weak) IBOutlet UITextField *commandText;
-@property (nonatomic, weak) IBOutlet UIButton *temperatureButton;
+@property (nonatomic, weak) IBOutlet UITextField *getTemperatureText;
+@property (nonatomic, weak) IBOutlet UITextField *setTemperatureText;
+@property (nonatomic, weak) IBOutlet UIButton *getTemperatureButton;
+@property (nonatomic, weak) IBOutlet UIButton *setTemperatureButton;
 @property (nonatomic, weak) IBOutlet UIButton *orangeButton;
 
-@property (nonatomic, strong) NSString *command;
+@property (nonatomic, strong) NSString *setTemp;
+@property (nonatomic, strong) NSString *getTemp;
 @property (nonatomic, strong) NSInputStream *inputStream;
 @property (nonatomic, strong) NSOutputStream *outputStream;
 @property (nonatomic, strong) NSData *received;
@@ -30,17 +31,20 @@
 
 @implementation BWControlPanelViewController
 
-@synthesize realTemperatureLabel;
-@synthesize setTemperatureLabel;
-@synthesize commandText;
-@synthesize temperatureButton;
+@synthesize getTemperatureText;
+@synthesize setTemperatureText;
+@synthesize getTemperatureButton;
+@synthesize setTemperatureButton;
 
-@synthesize command;
+@synthesize getTemp;
+@synthesize setTemp;
 @synthesize inputStream;
 @synthesize outputStream;
 @synthesize received;
 uint8_t *buffer;
 unsigned int len = 0;
+
+@synthesize brewiseService;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -57,6 +61,8 @@ unsigned int len = 0;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self findBrewiseService:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,11 +96,31 @@ unsigned int len = 0;
 
 - (IBAction)getTemperature:(id)sender
 {
-    self.temperatureButton.enabled = NO;
+    if(!self.brewiseService.didFind)
+    {
+        [self findBrewiseService:nil];
+        return;
+    }
+    
+    if (self.brewiseService.didFind) {
+        self.getTemperatureButton.enabled = NO;
+        
+        [self openNewPort];
+        
+        NSString *info = @"getTemperature\0";
+        NSData *data = [[NSData alloc] initWithData:[info dataUsingEncoding:NSASCIIStringEncoding]];
+        
+        [outputStream write:[data bytes] maxLength:[data length]];
+    }
+}
+
+- (IBAction)setTemperature:(id)sender
+{
+    self.setTemperatureButton.enabled = NO;
     
     [self openNewPort];
     
-    NSString *info = @"temperature\0";
+    NSString *info = [NSString stringWithFormat:@"setTemperature %@\0", setTemp];
     NSData *data = [[NSData alloc] initWithData:[info dataUsingEncoding:NSASCIIStringEncoding]];
     
     [outputStream write:[data bytes] maxLength:[data length]];
@@ -102,21 +128,28 @@ unsigned int len = 0;
 
 - (IBAction)orangeLED:(id)sender
 {
-    self.orangeButton.enabled = NO;
+    if([self.brewiseService didFind])
+    {
+        self.orangeButton.enabled = NO;
     
-    [self openNewPort];
+        [self openNewPort];
     
-    NSString *info = @"orange\0";
-    NSData *data = [[NSData alloc] initWithData:[info dataUsingEncoding:NSASCIIStringEncoding]];
+        NSString *info = @"orange\0";
+        NSData *data = [[NSData alloc] initWithData:[info dataUsingEncoding:NSASCIIStringEncoding]];
     
-    [outputStream write:[data bytes] maxLength:[data length]];
+        [outputStream write:[data bytes] maxLength:[data length]];
+    }
+    else
+    {
+        [self findBrewiseService:nil];
+    }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    if (textField == commandText)
+    if (textField == setTemperatureText)
     {
-        self.command = textField.text;
+        self.setTemp = textField.text;
     }
 }
 
@@ -128,7 +161,7 @@ unsigned int len = 0;
 
 //*********************************************
 //
-//TCP Stream Functions
+// TCP Stream Functions
 //
 //*********************************************
 
@@ -225,33 +258,61 @@ unsigned int len = 0;
             } else if (bytesRead == 0) {
                 [self stopReceiveWithStatus:nil];
                 NSLog(@"Closed connection successful.");
-                self.temperatureButton.enabled = YES;
+                self.getTemperatureButton.enabled = YES;
+                self.setTemperatureButton.enabled = YES;
                 self.orangeButton.enabled = YES;
             } else {
-                commandText.text = [[NSString alloc] initWithCString:buffer
-                                                            encoding:NSASCIIStringEncoding];
+
                 [self stopReceiveWithStatus:nil];
                 NSLog(@"Received Data");
                 NSLog(@"Try to close the connection.");
                 self.orangeButton.enabled = YES;
-                self.temperatureButton.enabled = YES;
+                self.setTemperatureButton.enabled = YES;
+                if(!self.getTemperatureButton.enabled)
+                {
+                    
+                    //getTemperatureText.text = [[NSString alloc] initWithCString:buffer
+                    //                                                   encoding:NSASCIIStringEncoding];
+                    getTemperatureText.text = [NSString stringWithFormat:@"%d", *buffer];
+                    self.getTemperatureButton.enabled = YES;
+                }
             }
             
         }   break;
             
         case NSStreamEventEndEncountered:
         {
-            [outputStream close];
-            [inputStream close];
-            [outputStream removeFromRunLoop:[NSRunLoop currentRunLoop]
-                                    forMode:NSDefaultRunLoopMode];
-            [inputStream removeFromRunLoop:[NSRunLoop currentRunLoop]
-                                   forMode:NSDefaultRunLoopMode];
+            [self stopReceiveWithStatus:nil];
         }   break;
             
         case NSStreamEventErrorOccurred:
         {
             //NSError *theError = [aStream streamError];
+            /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"The service did not connect."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];*/
+            
+            [self stopReceiveWithStatus:nil];
+            
+            [self findBrewiseService:nil];
+            
+            if(!self.getTemperatureButton.enabled)
+            {
+                self.getTemperatureButton.enabled = YES;
+            }
+            else if(!self.setTemperatureButton.enabled)
+            {
+                self.setTemperatureButton.enabled = YES;
+            }
+            else if(!self.orangeButton.enabled)
+            {
+                self.orangeButton.enabled = YES;
+            }
+            
+            
         }   break;
         
         case NSStreamEventNone:
