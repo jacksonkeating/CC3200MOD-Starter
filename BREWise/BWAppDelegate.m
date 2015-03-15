@@ -9,6 +9,7 @@
 #import "BWAppDelegate.h"
 #import "BWControlPanelViewController.h"
 #import "SmartConfigSCViewController.h"
+#import "BWSetupViewController.h"
 
 @implementation BWAppDelegate
 
@@ -17,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    BWControlPanelViewController *controlPanelVC = [[BWControlPanelViewController alloc] init];
+    BWSetupViewController *controlPanelVC = [[BWSetupViewController alloc] init];
     SmartConfigSCViewController *settingsVC = [[SmartConfigSCViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];

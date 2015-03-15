@@ -27,8 +27,6 @@
 		BA7AC72F1980B5BB002F2DEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC7171980B5BB002F2DEA /* UIKit.framework */; };
 		BA7AC7371980B5BB002F2DEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7351980B5BB002F2DEA /* InfoPlist.strings */; };
 		BA7AC7391980B5BB002F2DEA /* BREWiseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */; };
-		BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */; };
-		BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */; };
 		BAEDDF6A19B5E95D0052E5AD /* BWSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */; };
 		BAEDDF6B19B5E95D0052E5AD /* BWSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */; };
 /* End PBXBuildFile section */
@@ -80,9 +78,6 @@
 		BA7AC7341980B5BB002F2DEA /* BREWiseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BREWiseTests-Info.plist"; sourceTree = "<group>"; };
 		BA7AC7361980B5BB002F2DEA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA7AC7381980B5BB002F2DEA /* BREWiseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BREWiseTests.m; sourceTree = "<group>"; };
-		BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWControlPanelViewController.h; sourceTree = "<group>"; };
-		BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWControlPanelViewController.m; sourceTree = "<group>"; };
-		BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWControlPanelViewController.xib; sourceTree = "<group>"; };
 		BAEDDF6719B5E95D0052E5AD /* BWSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSetupViewController.h; sourceTree = "<group>"; };
 		BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSetupViewController.m; sourceTree = "<group>"; };
 		BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWSetupViewController.xib; sourceTree = "<group>"; };
@@ -210,9 +205,6 @@
 				BA7AC7231980B5BB002F2DEA /* BWAppDelegate.m */,
 				BA7AC7251980B5BB002F2DEA /* Images.xcassets */,
 				BA7AC71A1980B5BB002F2DEA /* Supporting Files */,
-				BA7AC7421980B61C002F2DEA /* BWControlPanelViewController.h */,
-				BA7AC7431980B61C002F2DEA /* BWControlPanelViewController.m */,
-				BA7AC7451980B6C0002F2DEA /* BWControlPanelViewController.xib */,
 				BAEDDF6719B5E95D0052E5AD /* BWSetupViewController.h */,
 				BAEDDF6819B5E95D0052E5AD /* BWSetupViewController.m */,
 				BAEDDF6919B5E95D0052E5AD /* BWSetupViewController.xib */,
@@ -330,7 +322,6 @@
 			files = (
 				BA7AC71E1980B5BB002F2DEA /* InfoPlist.strings in Resources */,
 				BA15E99819A83D9200377C8B /* SmartConfigSCViewController.xib in Resources */,
-				BA7AC7461980B6C0002F2DEA /* BWControlPanelViewController.xib in Resources */,
 				BAEDDF6B19B5E95D0052E5AD /* BWSetupViewController.xib in Resources */,
 				BA15E98819A82E5900377C8B /* FTC.plist in Resources */,
 				BA7AC7261980B5BB002F2DEA /* Images.xcassets in Resources */,
@@ -354,7 +345,6 @@
 			files = (
 				BA15E98E19A82EFF00377C8B /* SmartConfigGlobalConfig.m in Sources */,
 				BA15E99119A82F5E00377C8B /* Reachability.m in Sources */,
-				BA7AC7441980B61C002F2DEA /* BWControlPanelViewController.m in Sources */,
 				BA15E98019A82E2A00377C8B /* SmartConfigDiscoverMDNS.m in Sources */,
 				BA51715019A1785A00CE4A2A /* BWDiscovermDNS.m in Sources */,
 				BA7AC7201980B5BB002F2DEA /* main.m in Sources */,
